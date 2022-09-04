@@ -466,6 +466,22 @@ function Connect-AZTenant {
                 Write-Debug "Found env IDENTITY_HEADER: $($env:IDENTITY_HEADER)"
                 $headers.'X-IDENTITY-HEADER' = $env:IDENTITY_HEADER
             }
+            # check if the IDENTITY_ENDPOINT is using Azure Arc port
+            elseif ($env:IDENTITY_ENDPOINT.Contains('40342')) {
+                Write-Debug 'Azure Arc detected'
+                try {
+                    $body.'api-version' = '2020-06-01'
+                    Invoke-WebRequest -Uri $metadataUri -Body $body -Headers $headers @script:UseBasic -EA Stop
+                }
+                catch {
+                    $wwwAuthHeader = $_.Exception.Response.Headers["WWW-Authenticate"]
+                    if ($wwwAuthHeader -match "Basic realm=.+") {
+                        $secretFile = $wwwAuthHeader.TrimStart('Basic realm=')
+                        $secret = Get-Content -Path $secretFile
+                        $headers.'Authorization' = "Basic $secret"
+                    }
+                }
+            }
         } else {
             # use the default/VM metadata endpoint
             Write-Debug "Using default/VM metadata endpoint"
