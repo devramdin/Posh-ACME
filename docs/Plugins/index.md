@@ -6,7 +6,8 @@ To request support for a particular DNS provider, please submit an [issue](https
 
 If you are running Posh-ACME on PowerShell Core from a non-Windows OS, check the `PS Core Compatible` column to make sure the plugin is supported. Also check the usage guide for non-Windows specific instructions.
 
-*NOTE: Some of the provider links below are affiliate links which help reduce my out of pocket costs maintaining these plugins. I'd be most grateful if you use them when signing up for new service.*
+!!! note
+    Some of the provider links below are affiliate links which help reduce my out of pocket costs maintaining these plugins. I would be most grateful if you use them when signing up for new service.
 
 ### Released
 
@@ -22,6 +23,7 @@ AutoDNS | [AutoDNS](https://help.internetx.com/x/Qwfj) XML Gateway | [Usage Guid
 Azure | [Microsoft Azure DNS](https://azure.microsoft.com/en-us/services/dns/) | [Usage Guide](Azure.md) | :white_check_mark:
 Beget | [Beget.com](https://beget.com) | [Usage Guide](Beget.md) | :white_check_mark:
 BlueCat | [BlueCat Address Manager](https://www.bluecatnetworks.com/platform/management/bluecat-address-manager/) | [Usage Guide](BlueCat.md) | :x:
+Bunny | [Bunny.net](https://bunny.net?ref=4lxlzoj50y) | [Usage Guide](Bunny.md) | :white_check_mark:
 Cloudflare | [Cloudflare DNS](https://www.cloudflare.com/dns) | [Usage Guide](Cloudflare.md) | :white_check_mark:
 ClouDNS | [ClouDNS](https://www.cloudns.net/aff/id/224075/) | [Usage Guide](ClouDNS.md) | :white_check_mark:
 Combell | [Combell](https://www.combell.com/) | [Usage Guide](Combell.md) | :white_check_mark:
@@ -42,6 +44,7 @@ Easyname | [easyname.com](https://www.easyname.com/) | [Usage Guide](Easyname.md
 FreeDNS | [Free DNS](https://freedns.afraid.org) | [Usage Guide](FreeDNS.md) | :white_check_mark:
 Gandi | [Gandi LiveDNS](https://www.gandi.net) | [Usage Guide](Gandi.md) | :white_check_mark:
 GCloud | [Google Cloud DNS](https://cloud.google.com/dns) | [Usage Guide](GCloud.md) | :white_check_mark:
+Google Domains | [Google Domains](https://domains.google/) | [Usage Guide](GoogleDomains.md) | :white_check_mark:
 GoDaddy | [GoDaddy](https://www.godaddy.com) | [Usage Guide](GoDaddy.md) | :white_check_mark:
 Hetzner | [Hetzner](https://hetzner.de/) | [Usage Guide](Hetzner.md) | :white_check_mark:
 HostingDe | [Hosting.de](https://hosting.de) | [Usage Guide](HostingDe.md) | :white_check_mark:
@@ -69,19 +72,13 @@ Route53 | [AWS Route53](https://aws.amazon.com/route53/) | [Usage Guide](Route53
 Selectel | [Selectel.ru](https://selectel.ru/en/services/additional/dns/) | [Usage Guide](Selectel.md) | :white_check_mark:
 SimpleDNSPlus | [Simple DNS Plus](https://simpledns.com/) | [Usage Guide](SimpleDNSPlus.md) | :white_check_mark:
 Simply | [Simply](https://www.simply.com/) (formerly UnoEuro) | [Usage Guide](Simply.md) | :white_check_mark:
+SSHProxy | Custom SSH Script | [Usage Guide](SSHProxy.md) | :white_check_mark:
 TotalUptime | [TotalUptime](https://totaluptime.com/solutions/cloud-dns-service/) | [Usage Guide](TotalUptime.md) | :white_check_mark:
 UKFast | [UKFast](https://ukfast.co.uk) | [Usage Guide](UKFast.md) | :white_check_mark:
 Windows | [Microsoft Windows DNS](https://www.microsoft.com/en-us/cloud-platform/windows-server) | [Usage Guide](Windows.md) | Windows-Only<sup>[1](#windows)</sup>
 Yandex | [Yandex DNS](https://connect.yandex.com/) | [Usage Guide](Yandex.md) | :white_check_mark:
 Zilore| [Zilore](https://zilore.com/?r=1f752c82378516890a5200006eae8469) | [Usage Guide](Zilore.md) | :white_check_mark:
 Zonomi | [Zonomi DNS](https://zonomi.com) | [Usage Guide](Zonomi.md) | :white_check_mark:
-
-### In Development
-
-These plugins have been committed to the main development branch and are pending inclusion in an official release.
-
-Plugin | Provider | Guide | Core Compatible
------- | -------- | ----- | ---------------
 
 ### Notes
 
@@ -97,10 +94,3 @@ Plugin | Notes | Guide
 ------ | ----- | -----
 WebRoot | Copies challenge files to a location on the filesystem. | [Usage Guide](WebRoot.md)
 WebSelfHost | Runs a self-hosted web server to answer challenge requests | [Usage Guide](WebSelfHost.md)
-
-### In Development
-
-These plugins have been committed to the main repo and are pending inclusion in an official release.
-
-Plugin | Notes | Guide
------- | ----- | -----
