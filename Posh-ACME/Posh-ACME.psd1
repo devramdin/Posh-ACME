@@ -1,7 +1,7 @@
 @{
 
 RootModule = 'Posh-ACME.psm1'
-ModuleVersion = '4.16.0'
+ModuleVersion = '4.17.1'
 GUID = '5f52d490-68dd-411c-8252-828c199a4e63'
 Author = 'Ryan Bolger'
 Copyright = '(c) 2018 Ryan Bolger. All rights reserved.'
@@ -83,15 +83,10 @@ PrivateData = @{
 
         # ReleaseNotes of this module
         ReleaseNotes = @'
-## 4.16.0 (2022-11-22)
+## 4.17.1 (2023-03-29)
 
-* New DNS plugins
-  * [Active24](https://www.active24.cz/) (Thanks @pastelka)
-  * [Bunny.net](https://bunny.net/) (Thanks @webprofusion-chrisc)
-* Added `-Subject` parameter to `New-PACertificate`, `New-PAOrder`, and `Set-PAOrder` which will override the default x509 Subject field in the certificate request sent to the ACME CA. This can be useful for private CAs that allow for additional attributes in the Subject that public CAs don't.
-* Fix for undocumented NameSilo API change. (Thanks @rkone)
-* Fix for All-Inkl plugin that makes the plaintext `KasPwd` parameter actually send plaintext since All-Inkl has deprecated the SHA1 option.
-
+* Fixed Hetzner plugin for accounts with 100+ zones. (#481) (Thanks @Deutschi)
+* Fixed RFC2136 plugin ignoring the DDNSNameserver parameter when set. (#485) (Thanks @gvengel)
 '@
 
     }
